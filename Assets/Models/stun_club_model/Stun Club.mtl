@@ -1,0 +1,31 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 07.04.2017 21:46:08
+
+newmtl Mesh_0020_rip
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka P:\Modelos\Ape Escape On The Loose\Gadgets\Stun Club\Tex2.png
+	map_Kd P:\Modelos\Ape Escape On The Loose\Gadgets\Stun Club\Tex2.png
+
+newmtl Mesh_0026_rip
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka P:\Modelos\Ape Escape On The Loose\Gadgets\Stun Club\Tex1.png
+	map_Kd P:\Modelos\Ape Escape On The Loose\Gadgets\Stun Club\Tex1.png
+	map_d P:\Modelos\Ape Escape On The Loose\Gadgets\Stun Club\Tex1.png

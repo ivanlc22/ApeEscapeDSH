@@ -63,8 +63,11 @@ public class CaptureSystem : MonoBehaviour
         }
         else
         {
-            levelCompleted = true;
-            StartCoroutine(ShowCompletedLevel());
+            if (!levelCompleted)
+            {
+                levelCompleted = true;
+                StartCoroutine(ShowCompletedLevel());   
+            }
         }
     }
 

@@ -176,8 +176,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0117893955, y: 0.011789395, z: 0.011904044}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.011326933, y: 0.010907069, z: 0.011904047}
+  m_Center: {x: -0.000016868631, y: 0.00023439256, z: 5.031839e-19}
 --- !u!208 &111064
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -10724,8 +10724,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.08864096, y: 0.1707282, z: 0.10300332}
-  m_Center: {x: 0.009612963, y: 0.08758658, z: 0.0058837235}
+  m_Size: {x: 0.07797757, y: 0.1707282, z: 0.08135742}
+  m_Center: {x: 0.0069585294, y: 0.08758658, z: 0.0077721775}
 --- !u!114 &851642466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12870,7 +12870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 28ccae6d721a35f42985e44ad96a65f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -45.898
+      value: -36.43
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 28ccae6d721a35f42985e44ad96a65f6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12878,7 +12878,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 28ccae6d721a35f42985e44ad96a65f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 51.69
+      value: 50.57
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 28ccae6d721a35f42985e44ad96a65f6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16471,7 +16471,7 @@ MonoBehaviour:
   - {fileID: 746743066}
   - {fileID: 971924930}
   currentWaypoint: 0
-  EnemyDistanceRun: 5
+  EnemyDistanceRun: 4
   multiplyBy: 2
   animator: {fileID: 1307863148}
   monkeySound: {fileID: 689783590}

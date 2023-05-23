@@ -23,6 +23,7 @@ public class CaptureSystem : MonoBehaviour
         capturedMonkeysText.text = capturedMonkeys + "/" + totalMonkeys;
     }
 
+    // Función que gestiona la capturas al mono.
     public void captureMonkey(GameObject monkey)
     {
         MonkeyStatus monkeyStatus = monkey.GetComponent<MonkeyStatus>();
@@ -49,16 +50,18 @@ public class CaptureSystem : MonoBehaviour
         }
         else
         {
+            // Si no acertamos la captura, mostramos el efecto y ya. 
             dodgeMonkeySound.Play();
             ParticleSystem newParticleSystem = Instantiate(captureMonkeyFailedParticleSystem, monkey.transform.position, Quaternion.identity);
         }
     }
 
+    // Se encarga de acabar el nivel si hemos capturado a todos los monos.
     public void endLevel()
     {
         if (capturedMonkeys < totalMonkeys)
         {
-            noCompletedLevel.GetComponent<Text>().text = "¡TE FALTAN " + (totalMonkeys - capturedMonkeys) + " MONOS!";
+            noCompletedLevel.GetComponent<Text>().text = "¡TE FALTAN " + (totalMonkeys - capturedMonkeys) + " MONO(s)!";
             StartCoroutine(ShowNoCompletedLevel());
         }
         else
@@ -71,6 +74,7 @@ public class CaptureSystem : MonoBehaviour
         }
     }
 
+    // Muestra el texto de nivel no completado.
     private IEnumerator ShowNoCompletedLevel()
     {
         noCompletedLevel.SetActive(true);
@@ -80,6 +84,7 @@ public class CaptureSystem : MonoBehaviour
         noCompletedLevel.SetActive(false);
     }
 
+    // Muestra el texto de nivel completado.
     private IEnumerator ShowCompletedLevel()
     {
         completedLevelSound.Play();
@@ -92,6 +97,7 @@ public class CaptureSystem : MonoBehaviour
         ChangeSceneEndGame();
     }
 
+    // Cambia a la escena de gracias por jugar.
     public void ChangeSceneEndGame()
     {
         SceneManager.LoadScene("ThanksForPlaying");

@@ -110,8 +110,6 @@ public class PlayerController : MonoBehaviour
                 float movementThreshold = 0.325f;
                 movementPressed = Mathf.Abs(currentMovement.x) > movementThreshold || Mathf.Abs(currentMovement.y) > movementThreshold;
                 movementReleased = !movementPressed; 
-                print(movementPressed);
-                print(currentMovement); 
             }
         }; 
 
@@ -360,7 +358,6 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Platform"))
         {
-            print("estoy en plataforma");
             isOnPlatform = true;
             playerRigidbody.transform.SetParent(collision.transform);
         }
@@ -398,6 +395,7 @@ public class PlayerController : MonoBehaviour
         rightFoot.Play();
     }
     
+     // Reproduce sonido de caer. La llamada la hace la animación.
     public void playFallDownSound()
     {
         fallDownSound.Play();

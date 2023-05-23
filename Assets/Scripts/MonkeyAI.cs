@@ -10,7 +10,7 @@ public class MonkeyAI : MonoBehaviour
     [Header("Agent Settings")]
     private NavMeshAgent agent;
     public GameObject player;
-    public Transform[] waypoints;
+    public Transform[] waypoints; // Todo lo relevante a waypoints esta desactivado, sin embargo, lo dejo por si en el futuro lo mejoro
     public int currentWaypoint = 0;
 
     public float EnemyDistanceRun = 4.0f;
@@ -47,21 +47,7 @@ public class MonkeyAI : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(transform.position, player.transform.position);
-        /*
-        if (distance < EnemyDistanceRun)
-        {
-            // Seleccionar el punto de escape más cercano
-            Transform escapePoint = GetNextEscapePoint();
-
-            // Si se encuentra un punto de escape válido
-            if (escapePoint != null)
-            {
-                // Establecer el destino hacia el punto de escape seleccionado
-                agent.SetDestination(escapePoint.position);
-            }
-        }
-        */
-
+    
         if (agent.velocity.magnitude > 0.1f)
         {
             // Iniciar animación de correr
@@ -84,6 +70,7 @@ public class MonkeyAI : MonoBehaviour
             }
         }
 
+        // El mono solo huye si el jugador se acerca
         if (distance < EnemyDistanceRun)
         {
             if (!monkeySoundPlayed)
@@ -97,7 +84,7 @@ public class MonkeyAI : MonoBehaviour
     }
     
 
-    // El bueno
+    // El mono huirá en dirección contraria al jugador con un factor de aleatoriedad
     public void RunFrom()
     {
         // guardar transform inicial

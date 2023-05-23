@@ -9,6 +9,7 @@ public class Lever : MonoBehaviour
     public bool isActive = false;
     public AudioSource leverSound; 
 
+    // Se encarga de activar el lanzallamas de la última zona cuando el jugador activa la palanca.
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && !isActive)

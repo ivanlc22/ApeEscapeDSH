@@ -24,6 +24,7 @@ public class FlameThrower : MonoBehaviour
         }
     }
 
+    // Activa y desactiva el lanzallamas cada 3s. 
     private System.Collections.IEnumerator ActivateAndDeactivateObject()
     {
         while (true)

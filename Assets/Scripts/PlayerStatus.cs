@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class PlayerStatus : MonoBehaviour
 {
     public int currentHealth;
-    public int maxHealth = 100;
+    public int maxHealth = 100; // Al final, la vida no se usa, todo el daño mata de un golpe al enemigo.
+                                // Sin embargo, quiero dejarlo para una futura actualización.
     public int cointCounter;
     public Transform respawnPoint;
     public bool isRespawning;
@@ -60,13 +61,9 @@ public class PlayerStatus : MonoBehaviour
 
     // Hace reaparecer al jugador en el punto de respawn.
     // Se debe desactivar characterController porque al parecer usar
-    // character controller impide que se hagan cambios de posición.
+    // character controller impide que se hagan cambios directos de posición. (Esto se hace en la coroutine)
     void Respawn()
     {
-        //GetComponent<CharacterController>().enabled = false;
-        //transform.position = respawnPoint.position; 
-        //GetComponent<CharacterController>().enabled = true;
-
         if (!isRespawning)
         {
             maxHealth = currentHealth; 

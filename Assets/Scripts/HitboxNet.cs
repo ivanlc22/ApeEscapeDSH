@@ -8,6 +8,7 @@ public class HitboxNet : MonoBehaviour
 {
     public CaptureSystem captureSystem;
 
+    // Si el ataque con la red colisiona con un mono...
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Monkey"))

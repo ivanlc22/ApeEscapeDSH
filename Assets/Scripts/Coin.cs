@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Se encarga de rotar el objeto.
     public float rotationSpeed = 10f;
     private void Update()
     {

@@ -8,16 +8,12 @@ public class PlatformMovement : MonoBehaviour
     public float speed = 2f;  // Velocidad de movimiento de la plataforma
     private int waypointsIndex = 0;  // Índice del punto actual al que se está moviendo
 
-    private void Start()
-    {
-        
-    }
-
     private void Update()
     {
         MovePlatform();
     }
 
+    // Mueve la plataforma/objeto por los waypoints
     private void MovePlatform()
     {
         if (Vector3.Distance(transform.position, waypoints[waypointsIndex].transform.position) < 0.1f)
@@ -32,12 +28,11 @@ public class PlatformMovement : MonoBehaviour
 
         transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointsIndex].transform.position, speed * Time.deltaTime);
     }
-
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            print("Estoy en plataforma");
             other.gameObject.transform.SetParent(transform);
         }
     }
